@@ -1,87 +1,79 @@
 <div class="seminars view">
 <h2><?php echo __('Seminar'); ?></h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
+		<dt><?php echo __('番号'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Category'); ?></dt>
+		<dt><?php echo __('カテゴリー'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['category']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Seminar Name'); ?></dt>
+		<dt><?php echo __('勉強会名'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['seminar_name']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Persons'); ?></dt>
-		<dd>
-			<?php echo h($seminar['Seminar']['persons']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Seminar Cnt'); ?></dt>
+		<dt><?php echo __('予定回数'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['seminar_cnt']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Seminar Time'); ?></dt>
+		<dt><?php echo __('一回ごとの所要時間'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['seminar_time']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Purpose'); ?></dt>
+		<dt><?php echo __('開催動機'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['purpose']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Max Persons'); ?></dt>
-		<dd>
-			<?php echo h($seminar['Seminar']['max_persons']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Outcome'); ?></dt>
+		<dt><?php echo __('成果物'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['outcome']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Prepare'); ?></dt>
+		<dt><?php echo __('事前準備・持ち物'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['prepare']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Detail'); ?></dt>
-		<dd>
-			<?php echo h($seminar['Seminar']['detail']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Min Persons'); ?></dt>
-		<dd>
-			<?php echo h($seminar['Seminar']['min_persons']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Subject'); ?></dt>
+		<dt><?php echo __('対象'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['subject']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Create Time'); ?></dt>
+		<dt><?php echo __('詳細'); ?></dt>
 		<dd>
-			<?php echo h($seminar['Seminar']['create_time']); ?>
+			<?php echo h($seminar['Seminar']['detail']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Update Time'); ?></dt>
+		<dt><?php echo __('最低人数'); ?></dt>
+		<dd>
+			<?php echo h($seminar['Seminar']['min_persons']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('定員'); ?></dt>
+		<dd>
+			<?php echo h($seminar['Seminar']['max_persons']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('最終更新日時'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['update_time']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Delete Flg'); ?></dt>
+		<dt><?php echo __('参加希望人数'); ?></dt>
 		<dd>
-			<?php echo h($seminar['Seminar']['delete_flg']); ?>
+			<?php echo h($seminar['Seminar']['persons']); ?>
 			&nbsp;
 		</dd>
+
 	</dl>
+
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
@@ -92,10 +84,11 @@
 		<li><?php echo $this->Html->link(__('New Seminar'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Person Infos'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Person Info'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Top'),array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Person Infos'); ?></h3>
+	<h3><?php echo __('参加者情報'); ?></h3>
 	<?php if (!empty($seminar['PersonInfo'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -123,7 +116,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Person Info'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('参加する'), array('controller' => 'person_infos', 'action' => 'add', $seminar['Seminar']['id'])); ?> </li>
 		</ul>
 	</div>
 </div>

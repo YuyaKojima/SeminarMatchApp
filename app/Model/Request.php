@@ -6,6 +6,35 @@ App::uses('AppModel', 'Model');
  */
 class Request extends AppModel {
 
+	/**
+	 * Use table
+	 *
+	 * @var mixed False or table name
+	 */
+		public $useTable = 'Requests';
+
+	/**
+	 * hasMany associations
+	 *
+	 * @var array
+	 */
+		public $hasMany = array(
+			'PersonInfo' => array(
+				'className' => 'PersonInfo',
+				'foreignKey' => 'Request_id',
+				'dependent' => false,
+				'conditions' => '',
+				'fields' => '',
+				'order' => '',
+				'limit' => '',
+				'offset' => '',
+				'exclusive' => '',
+				'finderQuery' => '',
+				'counterQuery' => ''
+			)
+		);
+
+
 /**
  * Validation rules
  *

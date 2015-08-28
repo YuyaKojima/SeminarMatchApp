@@ -8,8 +8,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-    <li><?php echo $this->Html->link(__('List Seminars'), array('controller' => 'seminars', 'action' => 'index')); ?> </li>
-    <li><?php echo $this->Html->link(__('List Seminars'), array('controller' => 'seminars', 'action' => 'suggested')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Requests'), array('controller' => 'requests', 'action' => 'index')); ?> </li>
+    <li><?php echo $this->Html->link(__('開催決定勉強会'),array('controller' => 'seminars', 'action' => 'index')); ?> </li>
+    <li><?php echo $this->Html->link(__('参加者募集勉強会'), array('controller' => 'seminars', 'action' => 'suggested')); ?> </li>
+		<li><?php echo $this->Html->link(__('勉強会リクエスト一覧'), array('controller' => 'requests', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

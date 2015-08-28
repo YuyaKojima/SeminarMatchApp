@@ -6,19 +6,16 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id','番号');?></th>
 			<th><?php echo $this->Paginator->sort('category','カテゴリー'); ?></th>
-			<th><?php echo $this->Paginator->sort('seminar_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('persons'); ?></th>
-			<th><?php echo $this->Paginator->sort('seminar_cnt'); ?></th>
-			<th><?php echo $this->Paginator->sort('seminar_time'); ?></th>
-			<th><?php echo $this->Paginator->sort('purpose'); ?></th>
-			<th><?php echo $this->Paginator->sort('max_persons'); ?></th>
-			<th><?php echo $this->Paginator->sort('outcome'); ?></th>
-			<th><?php echo $this->Paginator->sort('prepare'); ?></th>
-			<th><?php echo $this->Paginator->sort('detail'); ?></th>
-			<th><?php echo $this->Paginator->sort('min_persons'); ?></th>
-			<th><?php echo $this->Paginator->sort('subject'); ?></th>
-			<th><?php echo $this->Paginator->sort('create_time'); ?></th>
-			<th><?php echo $this->Paginator->sort('update_time'); ?></th>
+			<th><?php echo $this->Paginator->sort('seminar_name','勉強会名'); ?></th>
+			<th><?php echo $this->Paginator->sort('persons','参加希望人数'); ?></th>
+			<th><?php echo $this->Paginator->sort('seminar_cnt','予定回数'); ?></th>
+			<th><?php echo $this->Paginator->sort('seminar_time','一回ごとの所要時間'); ?></th>
+			<th><?php echo $this->Paginator->sort('purpose','開催動機'); ?></th>
+			<th><?php echo $this->Paginator->sort('outcome','成果物'); ?></th>
+			<th><?php echo $this->Paginator->sort('subject','対象'); ?></th>
+			<th><?php echo $this->Paginator->sort('min_persons','最低人数'); ?></th>
+			<th><?php echo $this->Paginator->sort('max_persons','定員'); ?></th>
+			<th><?php echo $this->Paginator->sort('update_time','最終更新日時'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -32,13 +29,10 @@
 		<td><?php echo h($seminar['Seminar']['seminar_cnt']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['seminar_time']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['purpose']); ?>&nbsp;</td>
-		<td><?php echo h($seminar['Seminar']['max_persons']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['outcome']); ?>&nbsp;</td>
-		<td><?php echo h($seminar['Seminar']['prepare']); ?>&nbsp;</td>
-		<td><?php echo h($seminar['Seminar']['detail']); ?>&nbsp;</td>
-		<td><?php echo h($seminar['Seminar']['min_persons']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['subject']); ?>&nbsp;</td>
-		<td><?php echo h($seminar['Seminar']['create_time']); ?>&nbsp;</td>
+		<td><?php echo h($seminar['Seminar']['min_persons']); ?>&nbsp;</td>
+		<td><?php echo h($seminar['Seminar']['max_persons']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['update_time']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $seminar['Seminar']['id'])); ?>
@@ -67,7 +61,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Seminar'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Person Infos'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Person Info'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Top'),array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

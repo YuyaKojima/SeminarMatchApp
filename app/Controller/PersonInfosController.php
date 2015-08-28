@@ -45,14 +45,17 @@ class PersonInfosController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($id = null) {
+		if (!$this->PersonInfo->exists($id)) {
+			throw new NotFoundException(__('Invalid person info'));
+		}
 		if ($this->request->is('post')) {
 			$this->PersonInfo->create();
 			if ($this->PersonInfo->save($this->request->data)) {
-				$this->Session->setFlash(__('The person info has been saved.'));
+				$this->Session->setFlash(__('It has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The person info could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('It could not be saved. Please, try again.'));
 			}
 		}
 	}
