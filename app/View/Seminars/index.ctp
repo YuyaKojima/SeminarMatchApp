@@ -7,7 +7,6 @@
 			<th><?php echo $this->Paginator->sort('id','番号');?></th>
 			<th><?php echo $this->Paginator->sort('category','カテゴリー'); ?></th>
 			<th><?php echo $this->Paginator->sort('seminar_name','勉強会名'); ?></th>
-			<th><?php echo $this->Paginator->sort('persons','参加希望人数'); ?></th>
 			<th><?php echo $this->Paginator->sort('seminar_cnt','予定回数'); ?></th>
 			<th><?php echo $this->Paginator->sort('seminar_time','一回ごとの所要時間'); ?></th>
 			<th><?php echo $this->Paginator->sort('purpose','開催動機'); ?></th>
@@ -25,7 +24,6 @@
 		<td><?php echo h($seminar['Seminar']['id']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['category']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['seminar_name']); ?>&nbsp;</td>
-		<td><?php echo h($seminar['Seminar']['persons']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['seminar_cnt']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['seminar_time']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['purpose']); ?>&nbsp;</td>

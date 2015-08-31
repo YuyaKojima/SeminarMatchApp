@@ -8,6 +8,7 @@ App::uses('AppController', 'Controller');
  */
 class SeminarsController extends AppController {
 
+
 /**
  * Components
  *
@@ -24,6 +25,30 @@ class SeminarsController extends AppController {
 		$this->Seminar->recursive = 0;
 		$this->set('seminars', $this->Paginator->paginate());
 	}
+
+	/**
+	 * isAuthorized method
+	 *著者のみに編集を許可する
+	 * @return void
+	 */
+	public function isAuthorized($user){
+	  if ($this->action==='add'){
+	    return true;
+	  }
+		if (in_array($this->action,array('edit','delete'))){
+			$postEmail=$this->Seminar->email;
+			if($this->Seminar->isOwnedBy($postEmail,$user['email'])){
+				return true;
+			}
+		}
+	  return parent::isAuthorized($user);
+	}
+	public function beforeFilter(){
+	  $this->Auth->allow('index','view');
+	}
+
+
+
 
 	/**
 	 * suggested method
@@ -49,7 +74,7 @@ class SeminarsController extends AppController {
 		}
 		$options = array('conditions' => array('Seminar.' . $this->Seminar->primaryKey => $id));
 		$this->set('seminar', $this->Seminar->find('first', $options));
-	}
+		}
 
 /**
  * add method

@@ -46,19 +46,41 @@ class PersonInfosController extends AppController {
  * @return void
  */
 	public function add($id = null) {
-		if (!$this->PersonInfo->exists($id)) {
-			throw new NotFoundException(__('Invalid person info'));
-		}
+		// if (!$this->PersonInfo->exists($id)) {
+		// 	throw new NotFoundException(__('Invalid person info'));
+		// }
+		$this->set('seminarId',$id);
 		if ($this->request->is('post')) {
 			$this->PersonInfo->create();
 			if ($this->PersonInfo->save($this->request->data)) {
 				$this->Session->setFlash(__('It has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('controller'=>'seminars','action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('It could not be saved. Please, try again.'));
 			}
 		}
 	}
+
+	/**
+	 * add method
+	 *
+	 * @return void
+	 */
+		public function addRequest($id = null) {
+			// if (!$this->PersonInfo->exists($id)) {
+			// 	throw new NotFoundException(__('Invalid person info'));
+			// }
+			$this->set('requestId',$id);
+			if ($this->request->is('post')) {
+				$this->PersonInfo->create();
+				if ($this->PersonInfo->save($this->request->data)) {
+					$this->Session->setFlash(__('It has been saved.'));
+					return $this->redirect(array('controller'=>'seminars','action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('It could not be saved. Please, try again.'));
+				}
+			}
+		}
 
 /**
  * edit method
@@ -74,7 +96,7 @@ class PersonInfosController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->PersonInfo->save($this->request->data)) {
 				$this->Session->setFlash(__('The person info has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('controller'=>'seminars','action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The person info could not be saved. Please, try again.'));
 			}
@@ -102,6 +124,6 @@ class PersonInfosController extends AppController {
 		} else {
 			$this->Session->setFlash(__('The person info could not be deleted. Please, try again.'));
 		}
-		return $this->redirect(array('action' => 'index'));
+		return $this->redirect(array('controller'=>'seminars','action' => 'index'));
 	}
 }

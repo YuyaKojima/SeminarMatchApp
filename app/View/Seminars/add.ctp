@@ -14,6 +14,8 @@
 		echo $this->Form->input('detail',array('label'=>'詳細'));
 		echo $this->Form->input('min_persons',array('label'=>'最低人数'));
 		echo $this->Form->input('max_persons',array('label'=>'定員'));
+		echo $this->Form->input('name',array('label'=>'登録者氏名'));
+		echo $this->Form->input('email',array('label'=>'メールアドレス'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

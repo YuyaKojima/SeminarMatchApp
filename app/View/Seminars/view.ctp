@@ -68,7 +68,7 @@
 		</dd>
 		<dt><?php echo __('参加希望人数'); ?></dt>
 		<dd>
-			<?php echo h($seminar['Seminar']['persons']); ?>
+			<?php echo count($seminar['PersonInfo']); ?>
 			&nbsp;
 		</dd>
 
@@ -78,12 +78,12 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Seminar'), array('action' => 'edit', $seminar['Seminar']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Seminar'), array('action' => 'delete', $seminar['Seminar']['id']), array(), __('Are you sure you want to delete # %s?', $seminar['Seminar']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Seminars'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $seminar['Seminar']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $seminar['Seminar']['id']), array(), __('Are you sure you want to delete # %s?', $seminar['Seminar']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Seminar'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Person Infos'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Person Info'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Persons'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Persons'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Top'),array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
@@ -100,7 +100,7 @@
 	</tr>
 	<?php foreach ($seminar['PersonInfo'] as $personInfo): ?>
 		<tr>
-			<td><?php echo $personInfo['id']; ?></td>
+ 			<td><?php echo $personInfo['id']; ?></td>
 			<td><?php echo $personInfo['Seminar_id']; ?></td>
 			<td><?php echo $personInfo['mail']; ?></td>
 			<td><?php echo $personInfo['name']; ?></td>

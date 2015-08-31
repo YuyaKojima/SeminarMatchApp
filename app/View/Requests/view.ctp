@@ -1,7 +1,7 @@
 <div class="requests view">
 <h2><?php echo __('Request'); ?></h2>
 	<dl>
-		<dt><?php echo __('番号'); ?></dt>
+		<dt><?php echo __('Request番号'); ?></dt>
 		<dd>
 			<?php echo h($request['Request']['id']); ?>
 			&nbsp;
@@ -33,7 +33,7 @@
 		</dd>
 		<dt><?php echo __('Teachers'); ?></dt>
 		<dd>
-			<?php echo h($request['Request']['teacher_cnt']); ?>
+			<?php echo count($request['PersonInfo']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -41,9 +41,9 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Request'), array('action' => 'edit', $request['Request']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Request'), array('action' => 'delete', $request['Request']['id']), array(), __('Are you sure you want to delete # %s?', $request['Request']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Requests'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $request['Request']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $request['Request']['id']), array(), __('Are you sure you want to delete # %s?', $request['Request']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Request'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Top'), array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
@@ -77,7 +77,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('講師希望'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('講師希望'), array('controller' => 'person_infos', 'action' => 'addRequest',$request['Request']['id'])); ?> </li>
 		</ul>
 	</div>
 </div>

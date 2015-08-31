@@ -24,6 +24,22 @@ class RequestsController extends AppController {
 		$this->Request->recursive = 0;
 		$this->set('requests', $this->Paginator->paginate());
 	}
+	/**
+	 * addGood method
+	 *
+	 * @return void
+	 */
+		public function addGood($id = null) {
+			if (!$this->Request->exists($id)) {
+				throw new NotFoundException(__('Invalid request'));
+			}
+			$conditions=array('id'=>$id);
+			$fields=array('good_cnt'=>'good_cnt+1');
+			$this->Request->updateAll($fields,$conditions);
+
+			$this->set('requests', $this->Paginator->paginate());
+			return $this->redirect(array('action' => 'index'));
+		}
 
 /**
  * view method

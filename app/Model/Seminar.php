@@ -12,14 +12,20 @@ class Seminar extends AppModel {
  *
  * @var mixed False or table name
  */
-	public $useTable = 'Seminars';
+ public $useTable = 'Seminars';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
+
+public function isOwnedBy($post,$user){
+  return $this->field('email',array('email'=>$post,'email'=>$user)) !==false;
+}
+
+
 /**
  * hasMany associations
- *
+ * Seminar_PersonInfo_count
  * @var array
  */
 	public $hasMany = array(
