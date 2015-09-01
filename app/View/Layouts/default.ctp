@@ -39,10 +39,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://www.seattleconsulting.co.jp/'); ?></h1>
+			<div Align="right"><?php echo $this->Html->link(__('Log Out'), array('controller' => 'users','action' => 'logout')); ?></div>
 		</div>
 		<div id="content">
 
-			<?php echo $this->Session->flash(); ?>
+			<?php echo $this->Session->flash();
+			 echo $this->Session->flash('auth'); ?>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
@@ -54,7 +56,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				);
 			?>
 			<p>
-				<?php echo $cakeVersion; ?>
+				<?php echo 'Matching Seminar'; ?>
 			</p>
 		</div>
 	</div>

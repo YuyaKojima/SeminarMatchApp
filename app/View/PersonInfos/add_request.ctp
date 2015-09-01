@@ -4,12 +4,22 @@
 		<legend><?php echo __('Add Person Info'); ?></legend>
 
 	<?php
+	echo "講師を希望します";
 		echo $this->Form->input('Request_id',
 															array(
-																'type'=>'text',
+																'type'=>'hidden',
 																'value'=>$requestId));
-		echo $this->Form->input('mail');
-		echo $this->Form->input('name');
+		echo $this->Form->input('mail',
+															array(
+																'type'=>'hidden',
+																'value'=>$user_data['email']));
+
+
+		echo $this->Form->input('name',
+															array(
+																'type'=>'hidden',
+																'value'=>$user_data['username']));
+
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

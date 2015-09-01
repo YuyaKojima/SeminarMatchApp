@@ -61,6 +61,16 @@
 			<?php echo h($seminar['Seminar']['max_persons']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('提案者'); ?></dt>
+		<dd>
+			<?php echo h($seminar['Seminar']['name']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('連絡先'); ?></dt>
+		<dd>
+			<?php echo h($seminar['Seminar']['email']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('最終更新日時'); ?></dt>
 		<dd>
 			<?php echo h($seminar['Seminar']['update_time']); ?>

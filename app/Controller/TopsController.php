@@ -12,7 +12,13 @@ class TopsController extends AppController {
  *
  * @return void
  */
-	public function index() {
+	public function index($userData = null) {
+		//認証情報を取得
+		$user_data=$this->Auth->user();
+		if(is_null($user_data)){
+			$user_data['username']='guest';
+		}
+		$this->set("user_data",$user_data);
 	}
 
 }

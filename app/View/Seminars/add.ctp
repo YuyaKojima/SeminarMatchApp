@@ -3,7 +3,10 @@
 	<fieldset>
 		<legend><?php echo __('New Seminar'); ?></legend>
 	<?php
-		echo $this->Form->input('category',array('label'=>'カテゴリー'));
+		echo $this->Form->input('category',array(
+			'options'=>array('開発技術'=>'開発技術','ヒューマンスキル'=>'ヒューマンスキル','統計・データ'=>'統計・データ',
+			'デザイン'=>'デザイン','その他'=>'その他'),
+			'label'=>'カテゴリー'));
 		echo $this->Form->input('seminar_name',array('label'=>'勉強会名'));
 		echo $this->Form->input('seminar_cnt',array('label'=>'予定回数'));
 		echo $this->Form->input('seminar_time',array('label'=>'一回ごとの所要時間'));
@@ -14,8 +17,17 @@
 		echo $this->Form->input('detail',array('label'=>'詳細'));
 		echo $this->Form->input('min_persons',array('label'=>'最低人数'));
 		echo $this->Form->input('max_persons',array('label'=>'定員'));
-		echo $this->Form->input('name',array('label'=>'登録者氏名'));
-		echo $this->Form->input('email',array('label'=>'メールアドレス'));
+		echo $this->Form->input('email',
+															array(
+																'type'=>'hidden',
+																'value'=>$user_data['email']));
+
+
+		echo $this->Form->input('name',
+															array(
+																'type'=>'hidden',
+																'value'=>$user_data['username']));
+
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

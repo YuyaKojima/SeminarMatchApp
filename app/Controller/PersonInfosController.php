@@ -14,6 +14,7 @@ class PersonInfosController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+	public $uses = array('Request','PersonInfo');
 
 /**
  * index method
@@ -50,6 +51,8 @@ class PersonInfosController extends AppController {
 		// 	throw new NotFoundException(__('Invalid person info'));
 		// }
 		$this->set('seminarId',$id);
+		$user_data=$this->Auth->user();
+		$this->set("user_data",$user_data);
 		if ($this->request->is('post')) {
 			$this->PersonInfo->create();
 			if ($this->PersonInfo->save($this->request->data)) {
@@ -71,11 +74,23 @@ class PersonInfosController extends AppController {
 			// 	throw new NotFoundException(__('Invalid person info'));
 			// }
 			$this->set('requestId',$id);
+			$user_data=$this->Auth->user();
+			$this->set("user_data",$user_data);
 			if ($this->request->is('post')) {
 				$this->PersonInfo->create();
+				$teacherCount=$this->PersonInfo->find('count',array(
+					'conditions'=>array('Request_id ='=>$id)
+				));
+				$data=array(
+					'id'=>$id,
+					'teacher_cnt'=>(int)$teacherCount+1
+				);
+				$this->Request->save($data);
+
+
 				if ($this->PersonInfo->save($this->request->data)) {
 					$this->Session->setFlash(__('It has been saved.'));
-					return $this->redirect(array('controller'=>'seminars','action' => 'index'));
+					return $this->redirect(array('controller'=>'requests','action' => 'index'));
 				} else {
 					$this->Session->setFlash(__('It could not be saved. Please, try again.'));
 				}

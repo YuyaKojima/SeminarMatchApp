@@ -36,8 +36,12 @@ class SeminarsController extends AppController {
 	    return true;
 	  }
 		if (in_array($this->action,array('edit','delete'))){
-			$postEmail=$this->Seminar->email;
-			if($this->Seminar->isOwnedBy($postEmail,$user['email'])){
+			$postId=$this->request->params['pass'];
+			$postEmail=$this->Seminar->find('first',array(
+				'conditions'=>array('id'=>$postId),
+				'fields'=>array('email')
+			));
+			if($this->Seminar->isOwnedBy($postEmail,$user)){
 				return true;
 			}
 		}
@@ -82,6 +86,8 @@ class SeminarsController extends AppController {
  * @return void
  */
 	public function add() {
+		$user_data=$this->Auth->user();
+		$this->set("user_data",$user_data);
 		if ($this->request->is('post')) {
 			$this->Seminar->create();
 			if ($this->Seminar->save($this->request->data)) {

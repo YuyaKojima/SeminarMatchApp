@@ -15,12 +15,21 @@ class RequestsController extends AppController {
  */
 	public $components = array('Paginator');
 
+	public $uses = array('Request','Good');
+
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
+		// $this->Good->virtualFields['cnt']=0;
+	// 	$Good=$this->Good->find('all',array(
+	// 	'fields'=>array('id','Request_id','count(Request_id)as Model__cnt'),
+	// 	'group'=>array('Request_id')
+	// ));
+	// 	debug($Good);
+	// 	$this->set('Good',$Good);
 		$this->Request->recursive = 0;
 		$this->set('requests', $this->Paginator->paginate());
 	}

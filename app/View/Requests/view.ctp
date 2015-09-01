@@ -18,7 +18,7 @@
 		</dd>
 		<dt><?php echo __('Good Points'); ?></dt>
 		<dd>
-			<?php echo h($request['Request']['good_cnt']); ?>
+			<?php echo count($request['Good']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Create Time'); ?></dt>
@@ -78,6 +78,37 @@
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('講師希望'), array('controller' => 'person_infos', 'action' => 'addRequest',$request['Request']['id'])); ?> </li>
+		</ul>
+	</div>
+</div>
+<div class="related">
+	<h3><?php echo __('GOOD!Members'); ?></h3>
+	<?php if (!empty($request['Good'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Name'); ?></th>
+		<th><?php echo __('Comment'); ?></th>
+		<th><?php echo __('Mail'); ?></th>
+		<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php foreach ($request['Good'] as $personInfo): ?>
+		<tr>
+			<td><?php echo $personInfo['name']; ?></td>
+			<td><?php echo $personInfo['comment']; ?></td>
+			<td><?php echo $personInfo['mail']; ?></td>
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'person_infos', 'action' => 'view', $personInfo['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'person_infos', 'action' => 'edit', $personInfo['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'person_infos', 'action' => 'delete', $personInfo['id']), array(), __('Are you sure you want to delete # %s?', $personInfo['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('Good!'), array('controller' => 'goods', 'action' => 'addGood',$request['Request']['id'])); ?> </li>
 		</ul>
 	</div>
 </div>

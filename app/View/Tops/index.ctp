@@ -1,6 +1,6 @@
 <div class="tops index">
 	<h2><?php echo __('Tops'); ?></h2>
-  <h4>Welcome to SEATTLE SEMINAR</h4>
+  <h4>Welcome to SEATTLE SEMINAR,<?php echo $user_data['username']; ?></h4>
   <h5>We are so glad to help you to meet special seminars.</h5>
 
 </div>
