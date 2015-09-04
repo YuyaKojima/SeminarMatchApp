@@ -20,6 +20,7 @@ class Seminar extends AppModel {
 
 public function isOwnedBy($post,$user){
   //$sample=$this->field('email',array('email'=>$post,'email'=>$user)) !==false;
+  //debug($sample);
   return $this->field('email',array('email'=>$post,'email'=>$user)) !==false;
 }
 
