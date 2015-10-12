@@ -16,6 +16,35 @@ class PersonInfosController extends AppController {
 	public $components = array('Paginator');
 	public $uses = array('Request','PersonInfo');
 
+
+		public function beforeFilter(){
+		  $this->Auth->allow('index','view','add','addRequest');
+		}
+
+		/**
+		 * isAuthorized method
+		 *著者とアドミンのみに編集を許可する
+		 * @return void
+		 */
+		public function isAuthorized($user){
+			if (in_array($this->action,array('edit','delete'))){
+				//認証情報を取得
+				$user_data=$this->Auth->user();
+
+				if($user_data['role']==='admin'){
+					return true;
+				}
+				$postId=$this->request->params['pass'];
+
+				$postEmail=$this->PersonInfo->find('first',array(
+					'conditions'=>array('PersonInfo.' . $this->PersonInfo->primaryKey => $postId),
+					'fields'=>array('mail')
+				));
+				return $postEmail['PersonInfo']['mail']===$user_data['email'];
+			}
+		  return parent::isAuthorized($user);
+		}
+
 /**
  * index method
  *
@@ -81,6 +110,10 @@ class PersonInfosController extends AppController {
 				$teacherCount=$this->PersonInfo->find('count',array(
 					'conditions'=>array('Request_id ='=>$id)
 				));
+				if((int)$teacherCount>0){
+					$this->Session->setFlash(__('It already has a teacher.'));
+					return $this->redirect('/requests/view/'.$id);
+				}
 				$data=array(
 					'id'=>$id,
 					'teacher_cnt'=>(int)$teacherCount+1
@@ -90,7 +123,7 @@ class PersonInfosController extends AppController {
 
 				if ($this->PersonInfo->save($this->request->data)) {
 					$this->Session->setFlash(__('It has been saved.'));
-					return $this->redirect(array('controller'=>'requests','action' => 'index'));
+					return $this->redirect('/requests/view/'.$id);
 				} else {
 					$this->Session->setFlash(__('It could not be saved. Please, try again.'));
 				}

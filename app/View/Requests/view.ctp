@@ -97,9 +97,9 @@
 			<td><?php echo $personInfo['comment']; ?></td>
 			<td><?php echo $personInfo['mail']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'person_infos', 'action' => 'view', $personInfo['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'person_infos', 'action' => 'edit', $personInfo['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'person_infos', 'action' => 'delete', $personInfo['id']), array(), __('Are you sure you want to delete # %s?', $personInfo['id'])); ?>
+				<?php echo $this->Html->link(__('View'), array('controller' => 'goods', 'action' => 'view', $personInfo['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'goods', 'action' => 'edit', $personInfo['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'goods', 'action' => 'delete', $personInfo['id']), array(), __('Are you sure you want to delete # %s?', $personInfo['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>

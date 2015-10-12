@@ -26,9 +26,11 @@ class SeminarsController extends AppController {
 		$this->set('seminars', $this->Paginator->paginate());
 	}
 
+
+
 	/**
 	 * isAuthorized method
-	 *著者のみに編集を許可する
+	 *著者とアドミンのみに編集を許可する
 	 * @return void
 	 */
 	public function isAuthorized($user){
@@ -36,33 +38,28 @@ class SeminarsController extends AppController {
 	    return true;
 	  }
 		if (in_array($this->action,array('edit','delete'))){
+			//認証情報を取得
+			$user_data=$this->Auth->user();
+
+			if($user_data['role']==='admin'){
+				return true;
+			}
 			$postId=$this->request->params['pass'];
 			$postEmail=$this->Seminar->find('first',array(
 				'conditions'=>array('id'=>$postId),
 				'fields'=>array('email')
 			));
-			if($this->Seminar->isOwnedBy($postEmail,$user)){
-				return true;
-			}
+			return $postEmail['Seminar']['email']===$user_data['email'];
 		}
 	  return parent::isAuthorized($user);
 	}
+
 	public function beforeFilter(){
-	  $this->Auth->allow('index','view');
+	  $this->Auth->allow('index','view','add','suggested');
 	}
 
 
 
-
-	/**
-	 * suggested method
-	 *
-	 * @return void
-	 */
-		public function suggested() {
-			$this->Seminar->recursive = 0;
-			$this->set('seminars', $this->Paginator->paginate());
-		}
 
 
 /**
@@ -79,6 +76,23 @@ class SeminarsController extends AppController {
 		$options = array('conditions' => array('Seminar.' . $this->Seminar->primaryKey => $id));
 		$this->set('seminar', $this->Seminar->find('first', $options));
 		}
+
+
+
+			/**
+			 * suggested method
+			 *
+			 * @return void
+			 */
+				public function suggested() {
+					$user_data=$this->Auth->user();
+					$this->set("user_data",$user_data);
+
+					$a="yuya";
+					debug($a);
+					$this->Seminar->recursive = 0;
+					$this->set('seminars', $this->Paginator->paginate());
+				}
 
 /**
  * add method

@@ -18,13 +18,6 @@ class Seminar extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 
-public function isOwnedBy($post,$user){
-  //$sample=$this->field('email',array('email'=>$post,'email'=>$user)) !==false;
-  //debug($sample);
-  return $this->field('email',array('email'=>$post,'email'=>$user)) !==false;
-}
-
-
 /**
  * hasMany associations
  * Seminar_PersonInfo_count

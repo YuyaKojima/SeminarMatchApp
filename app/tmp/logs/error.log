@@ -1902,3 +1902,680 @@ Stack Trace:
 #18 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SeminarsController), Object(CakeRequest))
 #19 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #20 {main}
+2015-10-06 11:31:14 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-06 11:34:16 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-06 11:34:37 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-06 11:39:17 Error: [NotFoundException] Invalid seminar
+Request URL: /SeminarMatchApp/Seminars/view/
+Stack Trace:
+#0 [internal function]: SeminarsController->view()
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SeminarsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SeminarsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-06 11:39:30 Error: [NotFoundException] Invalid seminar
+Request URL: /SeminarMatchApp/Seminars/view/
+Stack Trace:
+#0 [internal function]: SeminarsController->view()
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SeminarsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SeminarsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-06 11:57:24 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 45]
+2015-10-06 11:57:24 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING)
+Request URL: /SeminarMatchApp/seminars/edit/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 45, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 45, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:05:46 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 52]
+2015-10-12 06:05:46 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:06:10 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 56]
+2015-10-12 06:06:10 Error: [FatalErrorException] syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 56, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 56, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:06:13 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 56]
+2015-10-12 06:06:13 Error: [FatalErrorException] syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 56, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 56, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:07:24 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 56]
+2015-10-12 06:07:24 Error: [FatalErrorException] syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 56, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 56, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:09:17 Error: Fatal Error (4): syntax error, unexpected ')' in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 52]
+2015-10-12 06:09:17 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:33:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Seminar.mail' in 'field list'
+Request URL: /SeminarMatchApp/seminars/edit/8
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Seminar...', Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Seminar...', Array, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Seminar...', false)
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Seminar), Array)
+#5 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php(44): Model->find('first', Array)
+#7 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/Auth/ControllerAuthorize.php(63): SeminarsController->isAuthorized(Array)
+#8 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(SeminarsController))
+#11 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#14 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#15 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#16 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SeminarsController), Object(CakeRequest))
+#17 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2015-10-12 06:33:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Seminar.mail' in 'field list'
+Request URL: /SeminarMatchApp/seminars/edit/12
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Seminar...', Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Seminar...', Array, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Seminar...', false)
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Seminar), Array)
+#5 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php(44): Model->find('first', Array)
+#7 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/Auth/ControllerAuthorize.php(63): SeminarsController->isAuthorized(Array)
+#8 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(SeminarsController))
+#11 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#14 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#15 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#16 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SeminarsController), Object(CakeRequest))
+#17 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2015-10-12 06:37:05 Error: Fatal Error (1): Unsupported operand types in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 50]
+2015-10-12 06:37:05 Error: [FatalErrorException] Unsupported operand types
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/Applications/M...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/Applications/M...', 50, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/Applications/M...', 50, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:48:33 Error: Fatal Error (4): syntax error, unexpected ''email'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 48]
+2015-10-12 06:48:33 Error: [FatalErrorException] syntax error, unexpected ''email'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:49:59 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 48]
+2015-10-12 06:49:59 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:50:15 Error: Fatal Error (4): syntax error, unexpected ';' in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 48]
+2015-10-12 06:50:15 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:50:29 Error: Fatal Error (1): Call to a member function array() on array in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 48]
+2015-10-12 06:50:29 Error: [FatalErrorException] Call to a member function array() on array
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 48, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 48, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:59:12 Error: Fatal Error (4): syntax error, unexpected '$b' (T_VARIABLE) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 49]
+2015-10-12 06:59:12 Error: [FatalErrorException] syntax error, unexpected '$b' (T_VARIABLE)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 49)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 49, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 49, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 06:59:21 Error: Fatal Error (4): syntax error, unexpected '$b' (T_VARIABLE) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 49]
+2015-10-12 06:59:21 Error: [FatalErrorException] syntax error, unexpected '$b' (T_VARIABLE)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 49)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 49, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 49, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 07:00:01 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/SeminarsController.php, line 50]
+2015-10-12 07:00:01 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /SeminarMatchApp/seminars/edit/13
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 50, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 50, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 07:14:47 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:14:56 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:21:56 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:22:29 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:23:59 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:26:24 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:26:29 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:26:56 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:28:58 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:30:40 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:30:47 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:31:02 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:32:12 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:33:40 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:37:35 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:37:45 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:42:59 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:48:30 Error: [NotFoundException] Invalid seminar
+Request URL: /SeminarMatchApp/Seminars/view/
+Stack Trace:
+#0 [internal function]: SeminarsController->view()
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SeminarsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SeminarsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 07:49:47 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:50:15 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 07:50:46 Error: [MissingControllerException] Controller class SeminarMatchAppController could not be found.
+Exception Attributes: array (
+  'class' => 'SeminarMatchAppController',
+  'plugin' => NULL,
+)
+Request URL: /SeminarMatchApp/SeminarMatchApp/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-12 08:46:17 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php, line 36]
+2015-10-12 08:46:17 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /SeminarMatchApp/person_infos/edit/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 08:48:16 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php, line 36]
+2015-10-12 08:48:16 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /SeminarMatchApp/person_infos/edit/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 08:52:10 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/20
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('20')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:52:30 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php, line 36]
+2015-10-12 08:52:30 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /SeminarMatchApp/person_infos/edit/21
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 08:52:35 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php, line 36]
+2015-10-12 08:52:35 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /SeminarMatchApp/person_infos/edit/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 08:52:38 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/21
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('21')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:55:38 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/20
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('20')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:56:03 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/20
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('20')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:56:08 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/20
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('20')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:56:12 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/20
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('20')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:56:17 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/20
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('20')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:57:39 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/21
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('21')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:58:15 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/22
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('22')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:58:20 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/21
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('21')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:58:52 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/23
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('23')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 08:58:57 Error: [NotFoundException] Invalid person info
+Request URL: /SeminarMatchApp/person_infos/view/33
+Stack Trace:
+#0 [internal function]: PersonInfosController->view('33')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PersonInfosController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 09:02:23 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/GoodsController.php, line 46]
+2015-10-12 09:02:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /SeminarMatchApp/goods/edit/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 46, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 46, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-12 09:23:25 Error: [NotFoundException] Invalid request
+Request URL: /SeminarMatchApp/Requests/view/37
+Stack Trace:
+#0 [internal function]: RequestsController->view('37')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RequestsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(RequestsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 09:25:06 Error: [NotFoundException] Invalid request
+Request URL: /SeminarMatchApp/Requests/view/37
+Stack Trace:
+#0 [internal function]: RequestsController->view('37')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RequestsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(RequestsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 09:25:22 Error: [NotFoundException] Invalid request
+Request URL: /SeminarMatchApp/Requests/view/37
+Stack Trace:
+#0 [internal function]: RequestsController->view('37')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RequestsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(RequestsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 09:27:51 Error: [NotFoundException] Invalid request
+Request URL: /SeminarMatchApp/requests/view/37
+Stack Trace:
+#0 [internal function]: RequestsController->view('37')
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RequestsController), Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(RequestsController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-10-12 10:11:22 Error: [MissingActionException] Action RequestsController::view1() could not be found.
+Exception Attributes: array (
+  'controller' => 'RequestsController',
+  'action' => 'view1',
+)
+Request URL: /SeminarMatchApp/requests/view1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(RequestsController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-12 10:41:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /SeminarMatchApp/person_infos/delete/19
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `PersonI...', Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `PersonI...', Array, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `PersonI...', false)
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(3022): DboSource->read(Object(PersonInfo), Array)
+#5 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php(41): Model->find('first', Array)
+#7 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/Auth/ControllerAuthorize.php(63): PersonInfosController->isAuthorized(Array)
+#8 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(PersonInfosController))
+#11 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#14 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#15 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#16 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#17 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2015-10-12 10:43:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /SeminarMatchApp/person_infos/delete/19
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `PersonI...', Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `PersonI...', Array, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `PersonI...', false)
+#4 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(3022): DboSource->read(Object(PersonInfo), Array)
+#5 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php(42): Model->find('first', Array)
+#7 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/Auth/ControllerAuthorize.php(63): PersonInfosController->isAuthorized(Array)
+#8 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Component/AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#10 [internal function]: AuthComponent->startup(Object(PersonInfosController))
+#11 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#14 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#15 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#16 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PersonInfosController), Object(CakeRequest))
+#17 /Applications/MAMP/htdocs/SeminarMatchApp/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2015-10-12 10:47:30 Error: Fatal Error (4): syntax error, unexpected ''fields'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/Applications/MAMP/htdocs/SeminarMatchApp/app/Controller/PersonInfosController.php, line 41]
+2015-10-12 10:47:30 Error: [FatalErrorException] syntax error, unexpected ''fields'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /SeminarMatchApp/person_infos/delete/19
+Stack Trace:
+#0 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 41, Array)
+#2 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 41, Array)
+#3 /Applications/MAMP/htdocs/SeminarMatchApp/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
