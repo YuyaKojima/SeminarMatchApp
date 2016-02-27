@@ -37,6 +37,5 @@ class Seminar extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
-
+  );
 }

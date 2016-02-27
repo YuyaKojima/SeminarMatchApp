@@ -5,7 +5,6 @@
 	<?php
 		echo $this->Form->input('seminar_name');
 		echo $this->Form->input('detail');
-		echo $this->Form->input('create_time');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

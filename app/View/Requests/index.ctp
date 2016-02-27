@@ -1,5 +1,5 @@
 <div class="requests index">
-	<h2><?php echo __('Requests'); ?></h2>
+	<h2><?php echo __('リクエスト勉強会一覧'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>

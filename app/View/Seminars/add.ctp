@@ -37,8 +37,6 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Seminars'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Person Infos'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Person Info'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Top'), array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

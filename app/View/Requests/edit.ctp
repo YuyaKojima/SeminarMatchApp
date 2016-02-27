@@ -5,9 +5,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('seminar_name');
-		echo $this->Form->input('good_cnt');
 		echo $this->Form->input('detail');
-		echo $this->Form->input('teacher_cnt');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -14,4 +14,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
+※こちらは送信専用メールアドレスとなっております。
+このメールアドレスにご返信いただいても、
+確認いたしかねますのでご了承ください。
+
 <?php echo $content; ?>

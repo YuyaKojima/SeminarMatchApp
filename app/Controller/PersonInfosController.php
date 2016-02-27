@@ -86,7 +86,7 @@ class PersonInfosController extends AppController {
 			$this->PersonInfo->create();
 			if ($this->PersonInfo->save($this->request->data)) {
 				$this->Session->setFlash(__('It has been saved.'));
-				return $this->redirect(array('controller'=>'seminars','action' => 'index'));
+				 $this->redirect('/Seminars/view/'.$id);
 			} else {
 				$this->Session->setFlash(__('It could not be saved. Please, try again.'));
 			}
@@ -122,6 +122,16 @@ class PersonInfosController extends AppController {
 
 
 				if ($this->PersonInfo->save($this->request->data)) {
+					$name=$user_data['username'];;
+					$seminarName="hogehoge";
+					$Email = new CakeEmail("gmail");
+					$Email->from(array('seattleconsulting.seminar@gmail.com' => 'Sender'));
+					$Email->to('yuya.kojima@seattleconsulting.co.jp');
+					$Email->subject('[Inform]Teacher is addded!!');
+					$Email->template("teacher_add");
+					$Email->viewVars( compact( 'name', 'seminarName'));
+					$Email->send();
+
 					$this->Session->setFlash(__('It has been saved.'));
 					return $this->redirect('/requests/view/'.$id);
 				} else {

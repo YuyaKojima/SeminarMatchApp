@@ -90,11 +90,10 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $seminar['Seminar']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $seminar['Seminar']['id']), array(), __('Are you sure you want to delete # %s?', $seminar['Seminar']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Seminar'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Persons'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Persons'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Top'),array('controller' => 'tops', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Create New Seminar'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Participate this seminar'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Return to List'), array('action' => 'suggested')); ?> </li>
+		<li><?php echo $this->Html->link(__('Return to Top'),array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
 <div class="related">
@@ -126,7 +125,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('参加する'), array('controller' => 'person_infos', 'action' => 'add', $seminar['Seminar']['id'])); ?> </li>
+			<li><?php echo $this->Html->link(__('Participate this seminar'), array('controller' => 'person_infos', 'action' => 'add', $seminar['Seminar']['id'])); ?> </li>
 		</ul>
 	</div>
 </div>

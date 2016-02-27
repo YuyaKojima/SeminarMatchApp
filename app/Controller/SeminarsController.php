@@ -37,7 +37,7 @@ class SeminarsController extends AppController {
 	  if ($this->action==='add'){
 	    return true;
 	  }
-		if (in_array($this->action,array('edit','delete'))){
+		if (in_array($this->action,array('edit','delete','hold'))){
 			//認証情報を取得
 			$user_data=$this->Auth->user();
 
@@ -75,24 +75,64 @@ class SeminarsController extends AppController {
 		}
 		$options = array('conditions' => array('Seminar.' . $this->Seminar->primaryKey => $id));
 		$this->set('seminar', $this->Seminar->find('first', $options));
+		$data=$this->Seminar->find('first', $options);
+	
 		}
 
 
 
-			/**
-			 * suggested method
-			 *
-			 * @return void
-			 */
-				public function suggested() {
-					$user_data=$this->Auth->user();
-					$this->set("user_data",$user_data);
+/**
+ * suggested method
+ *
+ * @return void
+ */
+	public function suggested() {
+		$user_data=$this->Auth->user();
+		$this->set("user_data",$user_data);
+		$datas=$this->Paginator->paginate();
+		foreach ($datas as $data):
+				$id = $data["Seminar"]["id"];
+				$options = array('conditions' => array('Seminar.' . $this->Seminar->primaryKey => $id));
+				$this->set('seminar', $this->Seminar->find('first', $options));
+				$updateData=$this->Seminar->find('first', $options);
+			  $updatePersonsData= count($updateData['PersonInfo']);
+				$newData = array('id' => $id, 'persons' =>$updatePersonsData);
+				$this->Seminar->save($newData);
+		endforeach;
+		$this->set('seminars', $this->Paginator->paginate());
+	}
 
-					$a="yuya";
-					debug($a);
-					$this->Seminar->recursive = 0;
-					$this->set('seminars', $this->Paginator->paginate());
+	/**
+	 * hold method
+	 *
+	 * @return void
+	 */
+		public function hold($id = null) {
+			$user_data=$this->Auth->user();
+			$this->set("requestId",$id);
+			if ($this->request->is(array('post', 'put'))) {
+				$data = array('id' => $id, 'holding_flg' =>1);
+				if ($this->Seminar->save($data)) {
+					$name=$user_data['username'];
+					$seminarNum=$id;
+					$seminarName="hoge";
+
+					$Email = new CakeEmail("gmail");
+					$Email->from(array('seattleconsulting.seminar@gmail.com' => 'Sender'));
+					$Email->to('yuya.kojima@seattleconsulting.co.jp');
+					$Email->subject('Test');
+					$Email->template("teacher_add","default");
+					$Email->viewVars( compact( 'name', 'seminarName','seminarNum'));
+					$Email->send();
+
+					$this->Session->setFlash(__('It has been saved.'));
+					$this->redirect(array('controller'=>'seminars','action' => 'suggested'));
+				} else {
+					$this->Session->setFlash(__('It could not be saved. Please, try again.'));
 				}
+			$this->set("user_data",$user_data);
+		}
+	}
 
 /**
  * add method
@@ -155,6 +195,6 @@ class SeminarsController extends AppController {
 		} else {
 			$this->Session->setFlash(__('The seminar could not be deleted. Please, try again.'));
 		}
-		return $this->redirect(array('action' => 'index'));
+		return $this->redirect(array('action' => 'suggested'));
 	}
 }

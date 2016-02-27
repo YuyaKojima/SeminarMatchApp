@@ -97,7 +97,7 @@ Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
 ));
-
+App::uses( 'CakeEmail', 'Network/Email');
 /**
  * Configures default file logging options
  */

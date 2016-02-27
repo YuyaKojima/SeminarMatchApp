@@ -28,7 +28,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Person Infos'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('Return'), '/Requests/view/'.$requestId); ?></li>
 	</ul>
 </div>

@@ -6,7 +6,7 @@
 	<?php
 		echo $this->Form->input('Request_id',
 															array(
-																'type'=>'text',
+																'type'=>'hidden',
 																'value'=>$requestId));
     echo $this->Form->input('mail',
 															array(

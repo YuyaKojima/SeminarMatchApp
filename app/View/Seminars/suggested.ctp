@@ -1,5 +1,5 @@
 <div class="seminars index">
-	<h2><?php echo __('Seminars'); ?></h2>
+	<h2><?php echo __('参加者募集勉強会'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 		<?php $this->Form->label('id','番号') ?>
@@ -20,7 +20,8 @@
 	</tr>
 	</thead>
 	<tbody>
-	<?php foreach ($seminars as $seminar): ?>
+	<?php foreach ($seminars as $seminar):
+		if ($seminar['Seminar']['holding_flg']==0){?>
 	<tr>
 		<td><?php echo h($seminar['Seminar']['id']); ?>&nbsp;</td>
 		<td><?php echo h($seminar['Seminar']['category']); ?>&nbsp;</td>
@@ -38,8 +39,12 @@
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $seminar['Seminar']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $seminar['Seminar']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $seminar['Seminar']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $seminar['Seminar']['id']))); ?>
+			<?php echo $this->Html->link(__('Hold!'), array('action' => 'hold', $seminar['Seminar']['id']),array('style'=>'color:red')); ?> </li>
+
 		</td>
 	</tr>
+	<?php }?>
+
 <?php endforeach; ?>
 	</tbody>
 	</table>
@@ -61,8 +66,6 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Seminar'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Person Infos'), array('controller' => 'person_infos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Person Info'), array('controller' => 'person_infos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Top'),array('controller' => 'tops', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
